@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="THC ARIA — Official artist landing page. Stream music, download tracks, and connect directly.">
+  <meta name="keywords" content="THC ARIA, rapper, hip-hop, street music, West Boys, mixtape, singles">
+  <meta name="author" content="THC ARIA">
+  <meta name="theme-color" content="#080808">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="THC ARIA — Official">
+  <meta property="og:description" content="Stream. Download. Tap in. The official home of THC ARIA.">
+  <meta property="og:image" content="./images/me33.JPEG">
+  <meta property="og:url" content="https://thcaria.com">
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="THC ARIA — Official">
+  <meta name="twitter:description" content="Stream. Download. Tap in.">
+  <meta name="twitter:image" content="./images/me33.JPEG">
+
+  <link rel="canonical" href="https://thcaria.com">
+  <title>THC ARIA — Official</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============================================================
+     LOADING SCREEN
+     ============================================================ -->
+<div class="loader" id="loader" aria-hidden="true">
+  <div class="loader-logo">
+    <span class="loader-text">THC ARIA</span>
+    <div class="loader-bar"><div class="loader-fill" id="loaderFill"></div></div>
+  </div>
+</div>
+
+<!-- ============================================================
+     HEADER
+     ============================================================ -->
+<header class="header" id="siteHeader" role="banner">
+  <div class="header-logo">
+    <img src="./Images/West boys.png" alt="West Boys logo" class="logo-img logo-left" loading="lazy">
+  </div>
+
+  <nav class="header-nav" aria-label="Main navigation">
+    <button class="nav-link" id="navContact" aria-haspopup="dialog">Contact</button>
+    <button class="nav-link active" id="navHome">Home</button>
+    <button class="nav-link" id="navDownload" aria-haspopup="dialog">Download</button>
+  </nav>
+
+  <div class="header-right">
+    <img src="./Images/thcaria.png" alt="THC ARIA logo" class="logo-img logo-right" loading="lazy">
+  </div>
+</header>
+
+
+<!-- ============================================================
+     MAIN GRID
+     ============================================================ -->
+<main class="grid" aria-label="Artist content">
+
+  <!-- CARD 1: Bio + Player + Platforms -->
+  <article class="card card-bio" aria-label="Artist bio and music player">
+    <div class="card-bio-content">
+      <header class="bio-header">
+        <span class="bio-eyebrow">West Side · Since 2023</span>
+        <h1 class="bio-title">I'm <em>"THC ARIA"</em><br>the streets know me.</h1>
+        <p class="bio-sub">All platforms right here — tap in and run my shit.</p>
+      </header>
+
+      <!-- Mini Player -->
+      <section class="player" role="region" aria-label="Audio player">
+        <audio id="audio" preload="none">
+          <source src="./Audio/va.mpeg" type="audio/mpeg">
+        </audio>
+
+        <img src="./Images/W.JPG" alt="" class="player-art" aria-hidden="true">
+
+        <div class="player-main">
+          <div class="player-controls">
+            <button class="player-btn player-prev" id="prevBtn" aria-label="Previous track">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 6h2v12H6zm3.5 6 8.5 6V6z"/></svg>
+            </button>
+            <button class="player-btn player-play" id="playBtn" aria-label="Play">
+              <svg class="icon-play" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M8 5v14l11-7z"/></svg>
+              <svg class="icon-pause" width="22" height="22" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z"/></svg>
+            </button>
+            <button class="player-btn player-next" id="nextBtn" aria-label="Next track">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M6 18l8.5-6L6 6v12zm2-8.14L11.03 12 8 14.14V9.86zM16 6h2v12h-2z"/></svg>
+            </button>
+
+            <div class="player-volume">
+              <button class="player-btn player-mute" id="muteBtn" aria-label="Mute">
+                <svg class="icon-vol" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z"/></svg>
+                <svg class="icon-mute" width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true" style="display:none"><path d="M16.5 12c0-1.77-1.02-3.29-2.5-4.03v2.21l2.45 2.45c.03-.2.05-.41.05-.63zm2.5 0c0 .94-.2 1.82-.54 2.64l1.51 1.51C20.63 14.91 21 13.5 21 12c0-4.28-2.99-7.86-7-8.77v2.06c2.89.86 5 3.54 5 6.71zM4.27 3L3 4.27 7.73 9H3v6h4l5 5v-6.73l4.25 4.25c-.67.52-1.42.93-2.25 1.18v2.06c1.38-.31 2.63-.95 3.69-1.81L19.73 21 21 19.73l-9-9L4.27 3zM12 4L9.91 6.09 12 8.18V4z"/></svg>
+              </button>
+              <div class="vol-slider-wrap">
+                <input type="range" class="vol-slider" id="volSlider" min="0" max="100" value="80" aria-label="Volume">
+              </div>
+            </div>
+          </div>
+
+          <div class="player-track">
+            <div class="player-meta">
+              <span class="player-title" id="trackTitle">RUN EVERY HEAT I DROPPED</span>
+              <span class="player-sub" id="trackSub">Latest Drop · Single</span>
+            </div>
+            <div class="player-progress-area">
+              <div class="player-bar" id="progressBar" role="slider" aria-label="Playback position" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0" tabindex="0">
+                <div class="player-bar-fill" id="progressFill"></div>
+                <div class="player-bar-thumb" id="progressThumb"></div>
+              </div>
+              <div class="player-time" id="timeDisplay">0:00 / 0:00</div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+
+      <!-- Platform Icons -->
+      <!-- NOTE: these point to each platform's generic homepage as
+           placeholders. Swap in THC ARIA's actual artist profile
+           URLs (e.g. open.spotify.com/artist/...) once available. -->
+      <nav class="platforms" aria-label="Music platforms">
+        <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="Apple Music">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><path fill="#fff" d="M199 359V199q0-9 10-11l138-28q11-2 12 10v122q0 15-45 20c-57 9-48 105 30 79 30-11 35-40 35-69V88s0-20-17-15l-170 35s-13 2-13 18v203q0 15-45 20c-57 9-48 105 30 79 30-11 35-40 35-69"/></svg>
+        </a>
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="Spotify">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><circle cx="256" cy="256" fill="#fff" r="192"/><g fill="none" stroke="#000" stroke-linecap="round"><path d="m141 195c75-20 164-15 238 24" stroke-width="36"/><path d="m152 257c61-17 144-13 203 24" stroke-width="31"/><path d="m156 315c54-12 116-17 178 20" stroke-width="24"/></g></svg>
+        </a>
+        <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="SoundCloud">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><path d="m59 270-3 22 3 22c0 2 3 2 3 0l3-22-3-22c0-3-3-3-3 0zm18-14c0-3-3-3-3 0l-5 36 4 35c0 3 4 3 4 0l4-35zm59-30-3 66 2 40c0 8 7 8 7 0l4-40-4-66c0-5-6-5-6 0zm-31 22-4 44 3 40c0 6 5 6 5 0l4-40-4-44c0-3-4-3-4 0zm70 84 3-40-3-88c0-6-7-6-7 0l-3 88 2 40c0 8 8 8 8 0zm68 0 2-40-2-102c0-7-10-7-10 0l-2 102 2 40c0 8 10 8 10 0zm-34 0 3-40-3-89c0-6-9-6-9 0l-2 89 2 40c0 8 9 8 9 0zm-83 0 3-40-3-41c0-3-6-3-6 0l-3 41 3 40c0 7 6 7 6 0zm-33 0 4-40-4-43c0-3-4-3-4 0l-4 43 4 40c0 4 4 4 4 0zm124-125-2 85 1 40c0 8 10 8 10 0l2-40-2-85c0-7-9-7-9 0zm-58 125 3-40-3-81c0-6-7-6-7 0l-3 81 2 40c0 8 8 8 8 0zm33 0 3-40-3-91c0-6-8-6-8 0l-3 91 3 40c0 8 8 8 8 0zm196-89c-5-57-64-94-118-73-4 2-5 3-5 6v156c0 3 2 6 5 6h137c27 0 49-22 49-49 0-37-35-57-68-46zm-138-62-3 111 3 40c0 8 10 8 10 0l3-40-3-111c0-7-10-7-10 0z" fill="#fff"/></svg>
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="YouTube">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><path d="m427 169c-4-15-17-27-32-31-34-9-239-10-278 0-15 4-28 16-32 31-9 38-10 135 0 174 4 15 17 27 32 31 36 10 241 10 278 0 15-4 28-16 32-31 9-36 9-137 0-174" fill="#fff"/><path d="m220 203v106l93-53" fill="#000"/></svg>
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="Instagram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><g fill="none" stroke="#fff" stroke-width="30"><rect width="308" height="308" x="102" y="102" rx="81"/><circle cx="256" cy="256" r="72"/><circle cx="347" cy="165" r="6"/></g></svg>
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="Telegram">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><path fill="#aaa" d="M199 404c-11 0-10-4-13-14l-32-105 245-144"/><path fill="#888" d="M199 404c7 0 11-4 16-8l45-43-56-34"/><path fill="#fff" d="M204 319l135 99c14 9 26 4 30-14l55-258c5-22-9-32-24-25L79 245c-21 8-21 21-4 26l83 26 190-121c9-5 17-3 11 4"/></svg>
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="platform-icon" aria-label="X / Twitter">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="46" height="46"><rect width="512" height="512" rx="15%" fill="#000"/><path fill="#fff" d="M437 152a72 72 0 01-40 12a72 72 0 0032-40a72 72 0 01-45 17a72 72 0 00-122 65a200 200 0 01-145-74a72 72 0 0022 94a72 72 0 01-32-7a72 72 0 0056 69a72 72 0 01-32 1a72 72 0 0067 50a200 200 0 01-105 29a200 200 0 00309-179a200 200 0 0035-37"/></svg>
+        </a>
+      </nav>
+    </div>
+  </article>
+
+  <!-- CARD 2: Latest track row -->
+  <article class="card card-track" aria-label="Latest release">
+    <img src="./images/W.JPG" alt="Album cover – Run Every Heat I Dropped" class="track-cover" id="albumCover" loading="lazy">
+
+    <div class="track-body">
+      <h2 class="track-title-main">Run Every Heat I Dropped</h2>
+
+      <div class="track-badge-row">
+        <span class="badge badge-new">New Drop</span>
+        <span class="badge badge-type">Single · Mar 2026</span>
+      </div>
+
+      <div class="track-warning">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 15h-2v-2h2v2zm0-4h-2V7h2v6z"/></svg>
+        <span>Streaming supports the work more than downloads</span>
+      </div>
+
+      <nav class="stream-links" aria-label="Streaming platforms">
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="stream-chip">Spotify</a>
+        <a href="https://soundcloud.com" target="_blank" rel="noopener noreferrer" class="stream-chip">SoundCloud</a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="stream-chip">YouTube</a>
+        <a href="https://music.apple.com" target="_blank" rel="noopener noreferrer" class="stream-chip">Apple Music</a>
+      </nav>
+    </div>
+  </article>
+
+  <!-- CARD 3: Artist photo -->
+  <article class="card card-photo" aria-label="Artist photo and Telegram CTA">
+    <img src="./images/me33.JPEG" alt="THC ARIA – artist portrait" class="photo-img" loading="lazy">
+    <div class="photo-overlay">
+      <div class="photo-overlay-inner">
+        <div>
+          <h2 class="photo-title">Loading the next hit — don't sleep on it.</h2>
+          <p class="photo-sub">Real support means staying tuned. Hit this spot, join my Telegram, and get the drop info straight from me.</p>
+        </div>
+        <a href="https://t.me/thcaria" target="_blank" rel="noopener noreferrer" class="cta-btn">
+          Tap In
+          <!-- <svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M10 7l5 5-5 5" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg> -->
+        </a>
+      </div>
+    </div>
+  </article>
+
+</main>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="footer">
+  <span class="footer-copy">© 2026 THC ARIA. All rights reserved.</span>
+  <nav class="footer-socials" aria-label="Social links">
+    <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Spotify">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".1"/><circle cx="256" cy="256" fill="#fff" r="192" opacity=".55"/><g fill="none" stroke="#080808" stroke-linecap="round"><path d="m141 195c75-20 164-15 238 24" stroke-width="36"/><path d="m152 257c61-17 144-13 203 24" stroke-width="31"/><path d="m156 315c54-12 116-17 178 20" stroke-width="24"/></g></svg>
+    </a>
+    <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="YouTube">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".1"/><path d="m427 169c-4-15-17-27-32-31-34-9-239-10-278 0-15 4-28 16-32 31-9 38-10 135 0 174 4 15 17 27 32 31 36 10 241 10 278 0 15-4 28-16 32-31 9-36 9-137 0-174" fill="#fff" opacity=".55"/><path d="m220 203v106l93-53" fill="#080808"/></svg>
+    </a>
+    <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Instagram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".1"/><g fill="none" stroke="#fff" stroke-width="30" opacity=".55"><rect width="308" height="308" x="102" y="102" rx="81"/><circle cx="256" cy="256" r="72"/><circle cx="347" cy="165" r="6"/></g></svg>
+    </a>
+    <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="footer-icon" aria-label="Telegram">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="24" height="24"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".1"/><path fill="#fff" opacity=".55" d="M204 319l135 99c14 9 26 4 30-14l55-258c5-22-9-32-24-25L79 245c-21 8-21 21-4 26l83 26 190-121c9-5 17-3 11 4"/></svg>
+    </a>
+  </nav>
+</footer>
+
+
+<!-- ============================================================
+     DOWNLOAD MODAL
+     NOTE: track file paths in script.js (./audio/...) are dummy
+     placeholders and will 404 until real files are uploaded; the
+     UI is built to fail gracefully either way.
+     ============================================================ -->
+<div class="modal-backdrop" id="downloadBackdrop" role="dialog" aria-modal="true" aria-labelledby="dlModalTitle" tabindex="-1">
+  <div class="modal-box" id="downloadModal">
+    <button class="modal-close" id="downloadClose" aria-label="Close download modal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <h2 class="modal-title" id="dlModalTitle">Discography</h2>
+    <p class="modal-sub">Every drop in one place. Stream or grab the files.</p>
+    <div class="track-list" id="trackList" aria-label="Track list"></div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     CONTACT MODAL
+     ============================================================ -->
+<div class="modal-backdrop" id="contactBackdrop" role="dialog" aria-modal="true" aria-labelledby="ctModalTitle" tabindex="-1">
+  <div class="modal-box" id="contactModal">
+    <button class="modal-close" id="contactClose" aria-label="Close contact modal">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg>
+    </button>
+    <h2 class="modal-title" id="ctModalTitle">Get In Touch</h2>
+    <p class="modal-sub">Hit me for collabs, bookings, or just to connect.</p>
+
+    <!-- NOTE: this is a front-end-only demo submit (see script.js) —
+         wire it up to EmailJS, Formspree, or a backend endpoint to
+         actually deliver messages. -->
+    <form class="contact-form" id="contactForm" novalidate>
+      <div class="form-field">
+        <label class="form-label" for="cf-name">Name</label>
+        <input class="form-input" type="text" id="cf-name" placeholder="Your name" autocomplete="name" required>
+        <span class="form-error" id="err-name" role="alert">Please enter your name.</span>
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="cf-email">Email</label>
+        <input class="form-input" type="email" id="cf-email" placeholder="you@example.com" autocomplete="email" required>
+        <span class="form-error" id="err-email" role="alert">Please enter a valid email.</span>
+      </div>
+      <div class="form-field">
+        <label class="form-label" for="cf-msg">Message</label>
+        <textarea class="form-textarea" id="cf-msg" placeholder="What's good?" rows="4" required></textarea>
+        <span class="form-error" id="err-msg" role="alert">Please enter a message.</span>
+      </div>
+      <button type="submit" class="send-btn" id="sendBtn">Send It ✦</button>
+    </form>
+
+    <div class="success-msg" id="successMsg" role="status" aria-live="polite">
+      ✓ Message sent! I'll get back to you soon.
+    </div>
+
+    <div class="contact-socials">
+      <p class="contact-socials-label">Find me on</p>
+      <div class="contact-social-row">
+        <a href="https://open.spotify.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Spotify">
+          <svg width="15" height="15" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".15"/><circle cx="256" cy="256" fill="#fff" r="192" opacity=".5"/><g fill="none" stroke="#000" stroke-linecap="round"><path d="m141 195c75-20 164-15 238 24" stroke-width="36"/><path d="m152 257c61-17 144-13 203 24" stroke-width="31"/><path d="m156 315c54-12 116-17 178 20" stroke-width="24"/></g></svg>
+          Spotify
+        </a>
+        <a href="https://youtube.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="YouTube">
+          <svg width="15" height="15" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".15"/><path d="m427 169c-4-15-17-27-32-31-34-9-239-10-278 0-15 4-28 16-32 31-9 38-10 135 0 174 4 15 17 27 32 31 36 10 241 10 278 0 15-4 28-16 32-31 9-36 9-137 0-174" fill="#fff" opacity=".55"/><path d="m220 203v106l93-53" fill="#000"/></svg>
+          YouTube
+        </a>
+        <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Instagram">
+          <svg width="15" height="15" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".15"/><g fill="none" stroke="#fff" stroke-width="30" opacity=".55"><rect width="308" height="308" x="102" y="102" rx="81"/><circle cx="256" cy="256" r="72"/><circle cx="347" cy="165" r="6"/></g></svg>
+          Instagram
+        </a>
+        <a href="https://t.me" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="Telegram">
+          <svg width="15" height="15" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".15"/><path fill="#fff" opacity=".55" d="M204 319l135 99c14 9 26 4 30-14l55-258c5-22-9-32-24-25L79 245c-21 8-21 21-4 26l83 26 190-121c9-5 17-3 11 4"/></svg>
+          Telegram
+        </a>
+        <a href="https://x.com" target="_blank" rel="noopener noreferrer" class="social-chip" aria-label="X / Twitter">
+          <svg width="15" height="15" viewBox="0 0 512 512"><rect width="512" height="512" rx="15%" fill="#fff" opacity=".15"/><path fill="#fff" opacity=".55" d="M437 152a72 72 0 01-40 12a72 72 0 0032-40a72 72 0 01-45 17a72 72 0 00-122 65a200 200 0 01-145-74a72 72 0 0022 94a72 72 0 01-32-7a72 72 0 0056 69a72 72 0 01-32 1a72 72 0 0067 50a200 200 0 01-105 29a200 200 0 00309-179a200 200 0 0035-37"/></svg>
+          Twitter
+        </a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     TOAST
+     ============================================================ -->
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

@@ -23,8 +23,14 @@
 
 > Add real screenshots to `docs/images/` and update the paths below.
 
-![Desktop Preview](docs/images/desktop.png)
-![Mobile Preview](docs/images/mobile.png)
+![Desktop Preview](Images/Desktop.jpg)
+![Mobile Preview](Images/Mobile.jpg)
+
+---
+
+## 🚀 Live Demo
+
+ https://thewestboy.github.io/thearia-portfolio/ 
 
 ---
 
